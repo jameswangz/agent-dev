@@ -1,0 +1,40 @@
+[
+  {
+    "hitProperties":
+      {
+        "cookies":
+          [
+            {"name":"cookie1","value":"cookie1Value"},
+            {"name":"cookie2","value":"cookie2Value"},
+            {"name":"jsessionid","value":"someJsessionIDValue1"},
+          ],
+        "headers":
+          [
+		  {"name":"Session-Id", "value":"<%= @data[:session_id] %>"},
+          ],
+        "parameters":
+          [
+            {"name":"parameter1","value":"parameter1Value"},
+            {"name":"parameter2","value":"parameter2Value"},
+            {"name":"parameter3","value":"parameter3Value"},
+          ],
+        "remoteAddr":"10.30.178.68",
+        "requestURL":"https://www.myserver.com/b2b/OrderStatusServlet",
+        "sourceID":"someSourceID",
+        "sourceVersion":"someVersionID"
+      },
+    "customAppProperties":
+      {
+        "id":"d27fb24d-ee43-4e77-8e27-09c3edd99e44-1",
+        "someJavaTraceData":"somestuff1",
+        "someMoreJavaTraceData":[{"morestuff1":"somemorestuff1"},{"morestuff2":"somemorestuff2"}],
+		"breakdowns":
+		{
+			<% @data[:breakdown_traces].each do |trace| %>
+				"<%= trace[:key] %>" : [ {"name":"method1", "executionTime":100}, {"name":"method2", "executionTime":200} ],
+			<% end %>
+		}
+      }
+  },
+]
+

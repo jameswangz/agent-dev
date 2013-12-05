@@ -1,0 +1,57 @@
+[
+  {
+    "hitProperties":
+      {
+        "cookies":
+          [
+            {"name":"cookie1","value":"cookie1Value"},
+            {"name":"cookie2","value":"cookie2Value"},
+            {"name":"jsessionid","value":"someJsessionIDValue"},
+          ],
+        "requestHeaders":
+          [
+            {"name":"reqHeader1","value":"header1Value"},
+            {"name":"reqHeader2","value":"header2Value"},
+            {"name":"reqHeader3","value":"header3Value"},
+            {"name":"Session-Id","value":"<%= @data[:session_id] %>"},
+          ],
+        "responseHeaders":
+          [
+            {"name":"respHeader1","value":"header1Value"},
+            {"name":"respHeader2","value":"header2Value"},
+            {"name":"respHeader3","value":"header3Value"},
+            {"name":"content-type","value":"text/html"},
+          ],
+        "requestFields":
+          [
+            {"name":"reqField1","value":"parameter1Value"},
+            {"name":"reqField2","value":"parameter2Value"},
+            {"name":"reqField3","value":"parameter3Value"},
+          ],
+        "baseHREF":"http://some.base.href",
+        "hasFramesetTag":false,
+        "hasHtmlTag":true,
+        "httpVersion":"1.1",
+        "clientIP":"10.10.10.10",
+        "requestCharset":"utf-8",
+        "requestContent":"1,2,3",
+        "requestContentSize":5,
+        "requestMethod":"GET",
+        "requestTotalBytes":105,
+        "requestURL":"https://www.myserver.com/b2b/OrderStatusServlet",
+        "responseCharset":"utf-8",
+        "responseCode":"200",
+        "responseContent":"<html>Hello World!</html>",
+        "responseContentSize":26,
+        "responseHTMLTitle":"Hello World!",
+        "responseTotalBytes":226,
+        "serverPort":80,
+        "serverIP":"10.11.12.13",
+        "sourceID":"someSourceID",
+        "sourceVersion":"someVersionID",
+        "startTime":1369923480000000000,
+        "stopTime":1369923580000000000
+      },
+  },
+]
+

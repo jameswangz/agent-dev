@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE types SYSTEM "../dtd/topology-types.dtd">
+<types>
+
+	<type name='Truck' extends='CollectionModelRoot'>
+		<property name='serialNumber' type='String' is-identity='true'/>
+		<property name='engine' type='TruckEngine' is-containment='true'/>
+		<property name='tires' type='TruckTire' is-many='true' is-containment='true'/>
+		<property name='cargo' type='TruckCargo' is-containment='true'/>
+		<property name='maintenance'  type='TruckMaintenance' is-containment='true'/>
+	</type>
+	  
+	<type name='TruckEngine' extends='TopologyObject'>
+		<property name='truck' type='Truck'  is-identity='true'/>
+		<property name="oilLevel" type="Metric" is-containment="true" unit-name="count">
+			<annotation name='UnitEntityName' value='litre' />
+		</property>
+		<property name="status" type="StringObservation" is-containment="true" />
+	</type>
+	  
+	<type name='TruckTire' extends='TopologyObject'>
+		<property name='truck' type='Truck'  is-identity='true'/>
+		<property name='id'    type='String' is-identity='true'/>
+		<property name="tirePressure" type='Metric' is-containment='true' unit-name='count'>
+			<annotation name='UnitEntityName' value='psi' />
+		</property>
+	</type>
+	
+	<type name='TruckCargo' extends='TopologyObject'>
+		<property name='truck' type='Truck'  is-identity='true'/>
+	</type>
+	
+	<type name='TruckMaintenance' extends='TopologyObject'>
+		<property name='truck' type='Truck'  is-identity='true'/>
+	</type>
+
+</types>  

@@ -1,0 +1,20 @@
+Agenda
+
+* The Builder Pattern ( http://en.wikipedia.org/wiki/Builder_pattern )
+
+* Groovy Builder Support
+** Tranditional Syntax VS Builder Syntax
+** EDSL - Embedded Domain Specific Language ( http://en.wikipedia.org/wiki/Domain-specific_language )
+** Implementation Detail
+** https://github.com/jameswangz/groovy-tutorial
+
+* Topology Builder
+** Wiki Page http://innovate.prod.quest.corp/display/CAT/Rapid+Topology+Model+Builder+and+Simple+Data+Submitter+Engine
+** Distribution 
+** Tranditional Syntax VS Builder Syntax
+** The Submitter Engine Dashboard
+** Further Code Simplification
+*** Passing Identity Values Without Specifying the Property Names
+*** Automatic Parent Lookup 
+** Simulate Data Submition
+** Implementation Detail
