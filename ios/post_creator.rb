@@ -13,11 +13,11 @@ class PostCreator
 			'Content-Type' => 'application/x-www-form-urlencoded' 
 		}
 		res = @http.post('/posts', 'post[title]=rubyclient&post[content]=rubycontent', headers)
-		puts res
+		puts res.body
 	end
 
 end
 
 if __FILE__ == $0
-	PostCreator.new('http://10.8.255.210:3000').create
+	PostCreator.new('http://localhost:4567').create
 end
