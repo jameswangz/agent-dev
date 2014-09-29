@@ -19,6 +19,6 @@ class ArchiverProxyHitDataPoster
 end
 
 if __FILE__ == $0
-	ArchiverProxyHitDataPoster.new('http://10.8.255.236:7630', 3).run()
+	ArchiverProxyHitDataPoster.new('http://10.8.252.232:7630', 3).run()
 end
 
