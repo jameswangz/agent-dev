@@ -19,6 +19,7 @@ module ArchiverProxyDataPostHelper
 					http = Net::HTTP.new(uri.host, uri.port)
 					request = Net::HTTP::Post.new("/archiverProxy?op=#{op}", initheader = { 'Content-Type' => 'application/json; charset=utf-8' })
 					request.body = body
+					#puts request.body
 					response = http.request(request)
 					puts "#{Thread.current} : #{op} : #{response.body}"
 					#sleep 1
